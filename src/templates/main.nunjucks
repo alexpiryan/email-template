@@ -9,55 +9,102 @@
 <body style="margin: 0; padding: 0; height:100%; min-height:100%;">
 <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#7c60fe" style="height:100%; border-collapse: collapse;">
     <tr>
-        <td style="background-image:url('https://nimiq.github.io/email-template/images/gradient.png'); background-size: 100% 100%; background-image: linear-gradient(#536DFE, #a553fe);">
+        <td style="height:100%; background-image:url('https://nimiq.github.io/email-template/images/gradient.png'); background-size: 100% 100%; background-image: linear-gradient(#536DFE, #a553fe);">
+            <center style="height: 100%;">
 
-            <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; height:100%;">
-                <tr>
-                    <td height="100%" style="padding:48px 0 48px 0">
+                <table id="main-table" align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; height:100%;">
+                    <tr>
+                        <td id="main-td" height="100%" style="padding:48px 0 48px 0">
 
-                        <!-- Main Table -->
-                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
-                            <tr>
-                                <td align="center" style="font-size:40px; letter-spacing:4px; padding:0 0 32px 0; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                                    NIMIQ
-                                </td>
-                            </tr>
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                                <tr>
+                                    <td id="header-center-image" align="center">
+                                        <center>
+                                            <img src="https://nimiq.github.io/email-template/images/logo.png" width="125" height="110" style="display: block;" alt=""/>
+                                        </center>
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td bgcolor="#ffffff" style="padding:16px 24px 24px 24px; border-radius:5px; overflow:hidden;">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td align="center" style="padding:16px 24px 32px 24px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                                            <tr>
+                                                <td id="header-left-image" width="62" style="padding:2px 8px 0 0; display: none;">
+                                                    <img src="https://nimiq.github.io/email-template/images/logo.png" width="62" height="55" style="display:block;" alt=""/>
+                                                </td>
+                                                <td id="header-text" align="center" style="font-size:48px; letter-spacing:4px; color: white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                    NIMIQ
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                                        {% block CONTENT %}{% endblock %}
+                                <tr>
+                                    <td id="main-content" bgcolor="#ffffff" style="padding:16px 24px 24px 24px; border-radius:5px; overflow:hidden;">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                        <!-- End Main Table -->
+                                            {% block CONTENT %}{% endblock %}
 
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="bottom" align="center" width="125" height="110" style="padding:0 0 16px 0;">
-                        <img src="https://nimiq.github.io/email-template/images/logo.png" width="125" height="110" style="display: block;" alt="Nimiq Foundation"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="bottom" style="padding:0 0 16px 0; text-align: center; color:white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                        <center>
-                            <span style="letter-spacing: 2px;">DISCLAIMER</span>
-                            <br>
-                            None of the statements must be viewed as an endorsement or recommendation for Nimiq, any cryptocurrency, or investment product. Neither the information, nor any opinion contained herein constitutes a solicitation or offer by the creators or participants to buy or sell any securities or other financial instruments or provide any investment advice or service.
-                            Copyright © 2018 Nimiq Network, All rights reserved.
-                        </center>
-                    </td>
-                </tr>
-            </table>
+                                            <tr>
+                                                <td style="padding: 32px 0 0 0; font-size: 12px; color: #777777; letter-spacing:1px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                    DISCLAIMER
+                                                </td>
+                                            </tr>
 
+                                            <tr>
+                                                <td style="padding: 6px 0 8px 0; font-size: 12px; color: #777777; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                    None of the statements must be viewed as an endorsement or recommendation for Nimiq, any cryptocurrency, or financial product.
+                                                    Neither the information, nor any opinion contained herein constitutes a solicitation or offer by the creators or participants to buy
+                                                    or sell any securities or other financial instruments or provide any financial advice or service.
+                                                    You are receiving this email because you started the NIM Activation at https://activation.nimiq.com
+                                                </td>
+                                            </tr>
 
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="bottom" align="center" style="padding:0 16px 16px 16px; color:white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                            Copyright &copy; 2018 Nimiq Network, All rights reserved.
+                        </td>
+                    </tr>
+                </table>
+
+            </center>
         </td>
     </tr>
 </table>
+
+<style type="text/css">
+@media only screen and (max-device-width: 600px) {
+    #main-table {
+        width: 100% !important;
+    }
+    #main-td {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+    #main-content {
+        border-radius: 0 !important;
+    }
+    #header-text {
+        text-align: left !important;
+    }
+    #header-center-image {
+        display: none !important;
+    }
+    #header-left-image {
+        display: block !important;
+    }
+}
+</style>
 </body>
 
 </html>
