@@ -1,0 +1,23 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}Nimiq Activation{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Welcome') }}
+
+{{ paragraph('If you have not yet started with your identity verification, please begin here:') }}
+
+{{ paragraphLink('$id_url', '$id_url') }}
+
+{{ paragraph('This link expires after 30 minutes. After this time, you will receive a separate e-mail with further instructions on how to continue the process.') }}
+
+{{ paragraph(('You can find the terms for NIM Activation at&nbsp;'
++ inlineLink('https://nimiq.com/activation/terms', 'https://nimiq.com/activation/terms')
++ '<br/>'
++ 'The privacy policy with respect to NIM Activation is located at&nbsp;'
++ inlineLink('https://nimiq.com/activation/privacy', 'https://nimiq.com/activation/privacy')) | safe) }}
+
+{% endblock %}

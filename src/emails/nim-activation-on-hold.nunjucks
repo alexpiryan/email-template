@@ -1,0 +1,13 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}Nimiq Activation{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Status Update') }}
+
+{{ paragraph('Your KYC (Know-Your-Customer) data is still being reviewed. You will hear back from us as soon as possible.') }}
+
+{% endblock %}

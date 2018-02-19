@@ -1,0 +1,17 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}Nimiq Activation{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Status Update') }}
+
+{{ paragraph('Congratulations! You have successfully completed your KYC Process.') }}
+
+{{ paragraph('To finish your NIM Activation, click the link below to go to your personal Activation dashboard and follow the instructions.') }}
+
+{{ paragraphLink('${base_url}dashboard/?dashboard_token=$dashboard_token', '${base_url}dashboard/?dashboard_token=$dashboard_token') }}
+
+{% endblock %}

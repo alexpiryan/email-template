@@ -1,0 +1,18 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}Nimiq Activation{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Status Update') }}
+
+{{ paragraph(('Unfortunately your KYC (Know-Your-Customer) Procedure was unsuccessful and cannot be repeated without a change in information. '
+    + 'Please check everything and review the '
+    + inlineLink('Terms', 'https://nimiq.com/activation/terms')
+    + '.') | safe) }}
+
+{{ paragraph('Until the KYC Procedure is successfully completed, you are unable to continue the NIM Activation.') }}
+
+{% endblock %}

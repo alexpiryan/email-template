@@ -1,0 +1,17 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}Nimiq Activation{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Status Update') }}
+
+{{ paragraph('We noticed that your identity verification process is not yet complete.') }}
+
+{{ paragraph('Follow this link to complete the process:') }}
+
+{{ paragraphLink('$reentrance_url', '$reentrance_url') }}
+
+{% endblock %}
