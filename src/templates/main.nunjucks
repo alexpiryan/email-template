@@ -57,7 +57,10 @@
                                                     None of the statements must be viewed as an endorsement or recommendation for Nimiq, any cryptocurrency, or financial product.
                                                     Neither the information, nor any opinion contained herein constitutes a solicitation or offer by the creators or participants to buy
                                                     or sell any securities or other financial instruments or provide any financial advice or service.
-                                                    You are receiving this email because you started the NIM Activation at https://activation.nimiq.com
+                                                    You are receiving this email because you started the NIM Activation at
+                                                    <a href="https://activation.nimiq.com" target="_blank" style="color: #777777; text-decoration: none;">
+                                                        <font color="#777777">https://activation.nimiq.com</font>
+                                                    </a>
                                                 </td>
                                             </tr>
 
