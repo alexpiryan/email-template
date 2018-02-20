@@ -8,15 +8,15 @@
 
 {% macro paragraph(content, containerAttributes='', contentAttributes='') %}
 <tr {{containerAttributes}}>
-    <td align="left" {{contentAttributes}} style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <td {{contentAttributes}} align="left" style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
         {{ content }}
     </td>
 </tr>
 {% endmacro %}
 
-{% macro paragraphLink(content, href) %}
-<tr>
-    <td align="left" style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+{% macro paragraphLink(content, href, containerAttributes='', contentAttributes='') %}
+<tr {{containerAttributes}}>
+    <td  {{contentAttributes}} align="left" style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
         <a href="{{ href }}" target="_blank" style="color: #FFC107; text-decoration: none;">
             <b>
                 <font color="#FFC107">{{ content }}</font>
