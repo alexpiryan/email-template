@@ -12,6 +12,14 @@
 
 {{ paragraph('To finish your NIM Activation, click the link below to go to your personal Activation dashboard and follow the instructions.') }}
 
-{{ paragraphLink('${base_url}dashboard/?dashboard_token=$dashboard_token', '${base_url}dashboard/?dashboard_token=$dashboard_token') }}
+{{ paragraphLink('${base_url}/dashboard/?dashboard_token=$dashboard_token', '${base_url}/dashboard/?dashboard_token=$dashboard_token') }}
 
+{% endblock %}
+
+{% block SUBSCRIPTION_INFO %}
+{% include '../templates/partials/activation-subscription.nunjucks' %}
+{% endblock %}
+
+{% block FOOTER %}
+Copyright &copy; 2018 Nimiq Network, All rights reserved.
 {% endblock %}

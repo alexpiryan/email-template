@@ -1,14 +1,14 @@
-{% macro title(content) %}
+{% macro title(content, containerAttributes='') %}
 <tr>
-    <td align="left" style="padding: 24px 0 8px 0; font-size: 28px; font-weight: 300; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <td {{containerAttributes}} align="left" style="padding: 24px 0 8px 0; font-size: 28px; font-weight: 300; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
         <b>{{ content }}</b>
     </td>
 </tr>
 {% endmacro %}
 
-{% macro paragraph(content) %}
-<tr>
-    <td align="left" style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+{% macro paragraph(content, containerAttributes='', contentAttributes='') %}
+<tr {{containerAttributes}}>
+    <td align="left" {{contentAttributes}} style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
         {{ content }}
     </td>
 </tr>

@@ -16,3 +16,11 @@
 {{ paragraph('Until the KYC Procedure is successfully completed, you are unable to continue the NIM Activation.') }}
 
 {% endblock %}
+
+{% block SUBSCRIPTION_INFO %}
+{% include '../templates/partials/activation-subscription.nunjucks' %}
+{% endblock %}
+
+{% block FOOTER %}
+Copyright &copy; 2018 Nimiq Network, All rights reserved.
+{% endblock %}

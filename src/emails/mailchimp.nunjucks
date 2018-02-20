@@ -1,0 +1,23 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}*|MC:SUBJECT|*{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Title', 'mc:edit="title"' | safe) }}
+
+{{ paragraph('Paragraph', 'mc:repeatable="paragraph"'  | safe, 'mc:edit="paragraph_content"' | safe) }}
+
+{% endblock %}
+
+{% block SUBSCRIPTION_INFO %}
+{% include '../templates/partials/mailchimp-subscription.nunjucks' %}
+{% endblock %}
+
+{% block FOOTER %}
+*|HTML:LIST_ADDRESS_HTML|*<br/>
+
+Copyright &copy; *|CURRENT_YEAR|* Nimiq Network, All rights reserved.
+{% endblock %}

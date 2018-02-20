@@ -11,3 +11,11 @@
 {{ paragraph('Your KYC (Know-Your-Customer) data is still being reviewed. You will hear back from us as soon as possible.') }}
 
 {% endblock %}
+
+{% block SUBSCRIPTION_INFO %}
+{% include '../templates/partials/activation-subscription.nunjucks' %}
+{% endblock %}
+
+{% block FOOTER %}
+Copyright &copy; 2018 Nimiq Network, All rights reserved.
+{% endblock %}
