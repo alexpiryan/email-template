@@ -4,6 +4,35 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>{% block MAIL_TITLE %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi, user-scalable=0"/>
+    <style type="text/css">
+        .ReadMsgBody {width: 100%;}
+        .ExternalClass {width: 100%;}
+        @media only screen and (max-device-width: 600px) {
+            #main-table {
+                width: 100% !important;
+            }
+            #main-td {
+                padding-top: 16px !important;
+                padding-bottom: 32px !important;
+            }
+            #main-content-table {
+                height: 100% !important;
+            }
+            #main-content {
+                border-radius: 0 !important;
+                height: 100% !important;
+                vertical-align: top !important;
+            }
+            #header-text {
+                text-align: left !important;
+                padding-bottom: 16px !important;
+            }
+        }
+        span.yshortcuts { color:#000; background-color:none; border:none;}
+        span.yshortcuts:hover,
+        span.yshortcuts:active,
+        span.yshortcuts:focus {color:#000; background-color:none; border:none;}
+    </style>
 </head>
 
 <body style="margin: 0; padding: 0; height:100%; min-height:100%;">
@@ -95,6 +124,11 @@
         padding-bottom: 16px !important;
     }
 }
+
+span.yshortcuts { color:#000; background-color:none; border:none;}
+span.yshortcuts:hover,
+span.yshortcuts:active,
+span.yshortcuts:focus {color:#000; background-color:none; border:none;}
 </style>
 </body>
 
