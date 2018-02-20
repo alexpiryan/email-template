@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" style="margin: 0; padding: 0; height:100%;">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{% block MAIL_TITLE %}{% endblock %}</title>
+    <title>*|MC:SUBJECT|*</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi, user-scalable=0"/>
     <style type="text/css">
         .ReadMsgBody {width: 100%;}
@@ -56,7 +56,37 @@
                                     <td id="main-content" bgcolor="#ffffff" style="padding:16px 24px 24px 24px; border-radius:5px; overflow:hidden;">
                                         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
 
-                                            {% block CONTENT %}{% endblock %}
+                                            
+
+
+<tr>
+    <td mc:edit="title" align="left" style="padding: 24px 0 8px 0; font-size: 28px; font-weight: 300; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <b>Title</b>
+    </td>
+</tr>
+
+
+
+<tr mc:repeatable="paragraph" mc:variant="Simple Paragraph">
+    <td mc:edit="paragraph_content" align="left" style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        Paragraph
+    </td>
+</tr>
+
+
+
+<tr mc:repeatable="paragraph" mc:variant="Link Paragraph">
+    <td  mc:edit="paragraph_link" align="left" style="padding: 8px 0 8px 0; font-size: 16px; line-height: 24px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        <a href="#" target="_blank" style="color: #FFC107; text-decoration: none;">
+            <b>
+                <font color="#FFC107">Link</font>
+            </b>
+        </a>
+    </td>
+</tr>
+
+
+
 
                                             <tr>
                                                 <td style="padding: 32px 0 0 0; font-size: 12px; color: #777777; letter-spacing:1px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
@@ -72,7 +102,19 @@
                                                 </td>
                                             </tr>
 
-                                            {% block SUBSCRIPTION_INFO %}{% endblock %}
+                                            
+<tr>
+    <td style="padding: 0 0 8px 0; font-size: 12px; color: #777777; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        You are receiving this email because you opted in at our website
+        <a href="https://www.nimiq.com" target="_blank" style="color: #777777 !important; color: #777777; text-decoration: none !important; text-decoration: none;">
+            <font color="#777777">nimiq.com</font>
+        </a> &ndash;
+        <a href="*|UNSUB|*" target="_blank" style="color: #777777 !important; color: #777777; text-decoration: none !important; text-decoration: none;">
+            <font color="#777777">Unsubscribe</font>
+        </a>
+    </td>
+</tr>
+
 
                                         </table>
                                     </td>
@@ -92,7 +134,9 @@
                     </tr>
                     <tr>
                         <td valign="bottom" align="center" style="padding:0 16px 32px 16px; color:white; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                            {% block FOOTER %}{%endblock %}
+                            
+Copyright &copy; *|CURRENT_YEAR|* Nimiq Network, All rights reserved.
+
                         </td>
                     </tr>
                 </table>
