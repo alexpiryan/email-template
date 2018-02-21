@@ -12,6 +12,8 @@
 
 {{ paragraphLink('$id_url', '$id_url') }}
 
+{{ paragraph('Note that identity verification is available Mo-Sa 7am to 10pm UTC+1.') }}
+
 {{ paragraph(('You can find the terms for NIM Activation at&nbsp;'
 + inlineLink('https://nimiq.com/activation/terms', 'https://nimiq.com/activation/terms')
 + '<br/>'
