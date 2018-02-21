@@ -39,26 +39,26 @@ The compiled emails will be in the `build/` directory.
 
 Templates are stored in `src/templates/` and partials in `src/templates/partials`. To create a template, create a file in the templates directory with the `.nunjucks` file extension. 
 
-See https://mozilla.github.io/nunjucks/templating.html for the whole Nunjucks templating documentation. Of particular interest are:
+See https://mozilla.github.io/nunjucks/templating.html for the whole Nunjucks templating documentation. Here are some options of particular interest (please remove the space between the curly brackets and percentage sign when using):
 
 
 ```
-{% include "partials/PARTIAL_FILE_NAME.nunjucks" %}
+{ % include "partials/PARTIAL_FILE_NAME.nunjucks" % }
 ```
 Includes a partial into the mail.
 
 ```
-{% extends "main.nunjucks" %}
+{ % extends "main.nunjucks" % }
 ```
 Creates a template based on a parent template. 
 
 ```
-{% block CUSTOM_BLOCK_NAME %}{% endblock %}
+{ % block CUSTOM_BLOCK_NAME % }{ % endblock % }
 ```
 Defines a block of dynamic content to be replaced. To specify the content of a block, the child template can define the same block with the specific content.
 
 ```
-{% macro macroName(param1, param2='', ...) %}{% endmacro %}
+{ % macro macroName(param1, param2='', ...) % }{ % endmacro % }
 ```
 Defines a macro that generates content which can be used as `{{ macroName(param1, param2, ..) }}`.
 
@@ -71,17 +71,17 @@ The main layout and design is defined in `/templates/main.nunjucks`.
 It provides the following hooks for your content:
 
 ```
-{% block CONTENT %}{% endblock %}
+{ % block CONTENT % }{ % endblock % }
 ```
 For the main content of your email.
 
 ```
-{% block SUBSCRIPTION_INFO %}{% endblock %}
+{ % block SUBSCRIPTION_INFO % }{ % endblock % }
 ```
 For providing the recipient with information why he is receiving the email and how he can unsubscribe.
 
 ```
-{% block FOOTER %}{%endblock %}
+{ % block FOOTER % }{ % endblock % }
 ```
 A footer on the very bottom on the email. For example for providing a copyright notice.
 
@@ -119,12 +119,12 @@ To create an email based on the default template, create a new file in the `src/
 Inherit from the the main template by using the following syntax -
 
 ```
-{% extends "main.nunjucks" %}
+{ % extends "main.nunjucks" % }
 ```
 
 Import the predefined macros by -
 ```
-{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+{ % from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink % }
 ```
 
 Now you're ready to define the content of your email. To see how everything plays together, have a look at `/emails/example-mail.nunjucks`.
