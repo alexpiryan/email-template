@@ -39,27 +39,34 @@ The compiled emails will be in the `build/` directory.
 
 Templates are stored in `src/templates/` and partials in `src/templates/partials`. To create a template, create a file in the templates directory with the `.nunjucks` file extension. 
 
-See https://mozilla.github.io/nunjucks/templating.html for the whole Nunjucks templating documentation. Here are some options of particular interest (please remove the space between the curly brackets and percentage sign when using):
+See https://mozilla.github.io/nunjucks/templating.html for the whole Nunjucks templating documentation. Here are some options of particular interest:
 
-
+<!-- {% raw %} -->
 ```
-{ % include "partials/PARTIAL_FILE_NAME.nunjucks" % }
+{% include "partials/PARTIAL_FILE_NAME.nunjucks" %}
 ```
+<!-- {% endraw %} -->
 Includes a partial into the mail.
 
+<!-- {% raw %} -->
 ```
-{ % extends "main.nunjucks" % }
+{% extends "main.nunjucks" %}
 ```
+<!-- {% endraw %} -->
 Creates a template based on a parent template. 
 
+<!-- {% raw %} -->
 ```
-{ % block CUSTOM_BLOCK_NAME % }{ % endblock % }
+{% block CUSTOM_BLOCK_NAME %}{% endblock %}
 ```
+<!-- {% endraw %} -->
 Defines a block of dynamic content to be replaced. To specify the content of a block, the child template can define the same block with the specific content.
 
+<!-- {% raw %} -->
 ```
-{ % macro macroName(param1, param2='', ...) % }{ % endmacro % }
+{% macro macroName(param1, param2='', ...) %}{% endmacro %}
 ```
+<!-- {% endraw %} -->
 Defines a macro that generates content which can be used as `{{ macroName(param1, param2, ..) }}`.
 
 
@@ -70,19 +77,25 @@ Defines a macro that generates content which can be used as `{{ macroName(param1
 The main layout and design is defined in `/templates/main.nunjucks`.
 It provides the following hooks for your content:
 
+<!-- {% raw %} -->
 ```
-{ % block CONTENT % }{ % endblock % }
+{% block CONTENT %}{% endblock %}
 ```
+<!-- {% endraw %} -->
 For the main content of your email.
 
+<!-- {% raw %} -->
 ```
-{ % block SUBSCRIPTION_INFO % }{ % endblock % }
+{% block SUBSCRIPTION_INFO %}{% endblock %}
 ```
+<!-- {% endraw %} -->
 For providing the recipient with information why he is receiving the email and how he can unsubscribe.
 
+<!-- {% raw %} -->
 ```
-{ % block FOOTER % }{ % endblock % }
+{% block FOOTER %}{% endblock %}
 ```
+<!-- {% endraw %} -->
 A footer on the very bottom on the email. For example for providing a copyright notice.
 
 #### Predefined Macros
@@ -118,14 +131,18 @@ To create an email based on the default template, create a new file in the `src/
 
 Inherit from the the main template by using the following syntax -
 
+<!-- {% raw %} -->
 ```
-{ % extends "main.nunjucks" % }
+{% extends "main.nunjucks" %}
 ```
+<!-- {% endraw %} -->
 
 Import the predefined macros by -
+<!-- {% raw %} -->
 ```
-{ % from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink % }
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
 ```
+<!-- {% endraw %} -->
 
 Now you're ready to define the content of your email. To see how everything plays together, have a look at `/emails/example-mail.nunjucks`.
 
