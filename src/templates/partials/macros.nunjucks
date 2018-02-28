@@ -28,7 +28,7 @@
 
 {% macro inlineLink(content, href) %}
 <a href="{{ href }}" target="_blank" style="color: #FFC107; text-decoration: none;">
-    <b style="color: #FFC107 !important; color: #FFC107; text-decoration: none !important;text-decoration: none;">
+    <b style="color: #FFC107 !important; color: #FFC107; text-decoration: none !important; text-decoration: none;">
         <font color="#FFC107">{{ content }}</font>
     </b>
 </a>
