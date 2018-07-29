@@ -1,0 +1,59 @@
+{% extends "main.nunjucks" %}
+
+{% from "../templates/partials/macros.nunjucks" import paragraph, title, paragraphLink, inlineLink %}
+
+{% block MAIL_TITLE %}Nimiq Ledger Promo: Next Step{% endblock %}
+
+{% block CONTENT %}
+
+{{ title('Nimiq Ledger Promo: Next Step') }}
+
+{{ paragraph('You successfully registered to participate in the Nimiq Ledger Promotion! For your chance to win a Special Edition Nimiq Ledger please send Cashlinks (applicable rules below). If you have not yet done so you can directly proceed here:') }}
+
+{{ paragraphLink('https://promo.nimiq.com/#login=USER_ID', 'https://promo.nimiq.com/#login=USER_ID') }}
+
+{{ paragraph('Goal of the Nimiq Ledger Promotion is to help increase visibility of Nimiq and reach people that have not been NIM holders before. It looks to reward you for sending NIM Cashlinks to friends and others that are new to Nimiq. The more new people you reach, the higher your chances to win one of up to 50 Special Edition, Nimiq-branded Ledger Nano S.') }}
+
+{{ paragraph('
+Full Rules &amp; Disclaimer
+<ul>
+    <li>You need to register for this promotion by entering your email address where you will be notified if you win.</li>
+    <li>Create Cashlinks with your NIM at <a href="https://promo.nimiq.com" target="_blank" style="color: black; text-decoration: none;">
+        <span style="color: black !important; color: black; text-decoration: none !important; text-decoration: none;">
+            <font color="black">promo.nimiq.com</font>
+        </span>
+    </a> and send to new recipients via email or direct messaging of your choice.</li>
+    <li>The recipients of your Cashlinks must successfully redeem the Cashlink (= accept and receive NIM into her Nimiq account) AND register for the promotion via this Cashlink. The newly registered recipient also receives one ticket for successfully redeeming this Cashlink.</li>
+    <li>Ticket count granted to registered sender per Cashlink per newly registered redeeming recipient:
+        <ul>
+            <li>1 ticket for 10-99 NIM</li>
+            <li>2 tickets for 100-999 NIM</li>
+            <li>3 tickets for 1’000-4’999 NIM</li>
+            <li>4 tickets for 5’000-10’000 NIM</li>
+        </ul>
+    </li>
+    <li>Tickets are granted for up to 25 Cashlinks (up to 100 tickets per participant if all Cashlinks 5k-10k NIM).</li>
+    <li>Each participant can win a maximum of one Ledger. This first promotion targets giving away one Ledger for every 100 newly registered recipients, up to 50 Ledgers.</li>
+    <li>Participation period is August 14 to September 14 2018.</li>
+</ul>
+
+<p>Winners will be drawn randomly from a pool of all valid tickets.</p>
+<p>Thank you for participating and helping spread the Nimiq joy of Blockchain made easy!</p>' | safe) }}
+
+{% endblock %}
+
+{% block SUBSCRIPTION_INFO %}
+<tr>
+    <td align="left" style="padding: 0 0 8px 0; font-size: 12px; color: #777777; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+        You are receiving this email because you registered to participate in the Nimiq Ledger Promotion at
+        <a href="https://activation.nimiq.com" target="_blank" style="color: #777777; text-decoration: none;">
+            <font color="#777777">https://promo.nimiq.com</font>
+        </a>.<br><br>
+        Nimiq reserves the right to manually verify winners, to remove suspicious participants (to protect our participants from fraud, bots, and scams), and to publish the first names of all winners. Tickets have no FIAT- or cryptocurrency value and are not transferable.
+    </td>
+</tr>
+{% endblock %}
+
+{% block FOOTER %}
+Copyright &copy; 2018 Nimiq Network, All rights reserved.
+{% endblock %}
