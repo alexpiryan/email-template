@@ -31,7 +31,7 @@ var filesToWatch = [
 ];
 
 gulp.task('watch', function() {
-    gulp.watch(filesToWatch,['nunjucks']);
+    gulp.watch(filesToWatch, gulp.series('nunjucks'));
 });
 
 
@@ -39,4 +39,4 @@ gulp.task('watch', function() {
     DEFAULT
 ************* */
 
-gulp.task('default', ['nunjucks', 'watch']);
+gulp.task('default', gulp.series('nunjucks', 'watch'));

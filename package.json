@@ -10,7 +10,7 @@
   },
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-util": "^3.0.7"
   }
