@@ -11,7 +11,7 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-nunjucks-render": "github:carlosl/gulp-nunjucks-render#e5d53af5211449b809f601e6118940b59634da00",
     "gulp-util": "^3.0.7"
   }
 }
